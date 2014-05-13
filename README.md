@@ -12,5 +12,5 @@ git clone https://github.com/narikin/dotfiles.git
 
 Reference
 --------
-$B0J2<$r;29M$K$5$;$FD:$$$F$*$j$^$9!#(B  
+以下を参考にさせて頂いております。  
 http://sandragon.hatenablog.com/entry/2013/05/20/123427
