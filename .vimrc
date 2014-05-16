@@ -116,7 +116,7 @@ syntax on     " ハイライトを有効化
 "------------------------------------------------------------
 set ffs=unix,dos,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
-set fileencodings=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 "------------------------------------------------------------
 " その他
@@ -227,7 +227,3 @@ set nobackup
 
 
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-
-" Encoding
-" Refs: http://www.tooyama.org/vim-2.html
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
