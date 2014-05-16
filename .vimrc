@@ -100,12 +100,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 "------------------------------------------------------------
 set nostartofline " 移動コマンドを使ったとき、行頭に移動しない
 
-" インサートモードでもhjklで移動（Ctrlを押しながら）
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
 " インサートモードでも削除
 inoremap <C-x> <BS>
 
