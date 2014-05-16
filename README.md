@@ -10,6 +10,10 @@ cd ~
 git clone https://github.com/narikin/dotfiles.git
 ```
 
+```bash
+ln -s dotfiles/.vimrc ~/.vimrc
+```
+
 Reference
 --------
 以下を参考にさせて頂きましたm(_ _)m  
