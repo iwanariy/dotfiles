@@ -12,6 +12,7 @@ git clone https://github.com/narikin/dotfiles.git
 
 ```bash
 ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.zshrc ~/.zshrc
 ```
 
 Reference
