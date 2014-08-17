@@ -4,7 +4,6 @@
 set noswapfile            " スワップファイルをつくらない
 set nocompatible          " vi互換モードをオフ（vimの拡張機能を有効)
 set hidden                " 編集中でも、保存しないで他のファイルを開けるようにする
-set confirm               " ファイルを保存していない場合に、ファイルの保存を確認するダイアログを出す
 set cmdheight=2           " 画面下部に表示されるコマンドラインの高さの設定
 set showcmd               " 入力したコマンドをステータスライン上に表示  例えばdを入力したらdと表示される
 set scrolloff=5           " カーソルの上または下に表示される最小限の行数  5に設定してあるので、下に5行は必ず表示される
@@ -29,7 +28,6 @@ set statusline=%F%m%r%h%w\%=[FILETYPE=%Y][ENC=%{&fenc}][%{&ff}]%=%c,\%l/%L
 "------------------------------------------------------------
 set autoindent     " オートインデント
 set smartindent    " 新しい行を開始した時に、新しい行のインデントを現在行と同じ量にする
-set cindent        " Cプログラムの自動インデント
 set expandtab      " タブキーを空白に変換
 set smarttab       " 新しい行を作った時、高度な自動インデントを行う
 
@@ -40,8 +38,6 @@ set backspace=indent,eol,start
 autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 
-" MEMO
-" autoindent  : 改行時に半角スペース8文字を挿入する
 " smartindent : 新しい行をつくったときに高度な自動インデントを行う  cindentがONだと無効化される
 " tabstop     : タブ文字の幅を設定する  デフォルトは8
 " expandtab   : TABキー入力時に、タブ文字の代わりにスペースにする
@@ -97,9 +93,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " 移動
 "------------------------------------------------------------
 set nostartofline " 移動コマンドを使ったとき、行頭に移動しない
-
-" インサートモードでも削除
-inoremap <C-x> <BS>
 
 
 "------------------------------------------------------------
@@ -222,6 +215,3 @@ NeoBundle 'Shougo/neocomplcache'      " 補完
 
 " No backup
 set nobackup
-
-
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
