@@ -37,7 +37,8 @@ set smarttab       " 新しい行を作った時、高度な自動インデン�
 set backspace=indent,eol,start
 
 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
-set tabstop=4 shiftwidth=4 softtabstop=0
+autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
+autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 
 " MEMO
 " autoindent  : 改行時に半角スペース8文字を挿入する
