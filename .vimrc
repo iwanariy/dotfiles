@@ -193,20 +193,14 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 "let g:ctrlp_open_new_file  = 1 " 新規作成時にタブで開く
 "
 "" originalrepos on github
-"NeoBundle 'VimClojure'                " vimにおけるクロージャの開発環境
-"NeoBundle 'Shougo/vimshell'           " vimからシェルを起動する
 "NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Shougo/neosnippet'         " スニペット
-"NeoBundle 'jpalardy/vim-slime'        " ??
-""NeoBundle 'mattn/zencoding-vim'       " zencodingプラグイン
 "NeoBundle 'othree/html5.vim'          " html5のタグのカラー
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 ""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
-"NeoBundle 'tpope/vim-pathogen'        " プラグイン管理
 "NeoBundle 'thinca/vim-quickrun'       " 各種ソースコードをすばやく実行
-"NeoBundle 'scrooloose/nerdcommenter'  " コメントアウト<Leader>c<Space> コメントアウト解除<Leadar>cu
 
 
 " ----------------------------------------------------------------------------------------
