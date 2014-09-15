@@ -34,7 +34,6 @@ set smarttab       " 新しい行を作った時、高度な自動インデン�
 " オートインデント、改行、インサートモード開始直後にバックスペースキーで削除できるようにする
 set backspace=indent,eol,start
 
-" softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
 autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 
@@ -131,6 +130,12 @@ NeoBundle 'Shougo/vimproc', {
                 \ 'unix' : 'make -f make_unix.mak',
         \ },
 \ }
+
+NeoBundleLazy "nvie/vim-flake8", {
+      \ "autoload": {
+      \   "filetypes": ["python", "python3", "djangohtml"]
+      \ }}
+autocmd BufWritePost *.py call Flake8()
 
 filetype plugin indent on     " Required!
 
