@@ -34,6 +34,7 @@ set smarttab       " 新しい行を作った時、高度な自動インデン�
 " オートインデント、改行、インサートモード開始直後にバックスペースキーで削除できるようにする
 set backspace=indent,eol,start
 
+set tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 
