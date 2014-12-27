@@ -173,7 +173,7 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 "let g:ctrlp_open_new_file  = 1 " 新規作成時にタブで開く
 "
 "" originalrepos on github
-"NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
+NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Shougo/neosnippet'         " スニペット
 "NeoBundle 'othree/html5.vim'          " html5のタグのカラー
