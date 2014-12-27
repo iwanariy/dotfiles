@@ -38,13 +38,6 @@ set tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 
-" smartindent : 新しい行をつくったときに高度な自動インデントを行う  cindentがONだと無効化される
-" tabstop     : タブ文字の幅を設定する  デフォルトは8
-" expandtab   : TABキー入力時に、タブ文字の代わりにスペースにする
-" softtabstop : タブ文字を入力した際にタブ文字の代わりに挿入されるホワイトスペースの量を設定する  shiftwidthと同じ値にすると良い
-" shiftwidth  : 「>>」等のコマンドや自動インデントの際に使う1レベル分のインデント量を設定する  tabstopと同じ値にすると良い
-
-
 "------------------------------------------------------------
 " 表示
 "------------------------------------------------------------
@@ -141,11 +134,6 @@ autocmd BufWritePost *.py call Flake8()
 filetype plugin indent on     " Required!
 
 
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
 " Installation check.
 NeoBundleCheck
 
@@ -163,9 +151,9 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 "" coffee script
 "autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
 "
-" -----------------------------------------------------------------------------
+"------------------------------------------------------------
 " unite.vim
-" -----------------------------------------------------------------------------
+"------------------------------------------------------------
 " unite prefix key.
 nnoremap [unite] <Nop>
 nmap <Space>u [unite]
@@ -187,7 +175,6 @@ NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 ""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
-"NeoBundle 'thinca/vim-quickrun'       " 各種ソースコードをすばやく実行
 
 call neobundle#end()
 
