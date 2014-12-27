@@ -116,7 +116,7 @@ if has('vim_starting')
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -181,6 +181,8 @@ NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 ""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
 "NeoBundle 'thinca/vim-quickrun'       " 各種ソースコードをすばやく実行
+"
+call neobundle#end()
 
 
 " ----------------------------------------------------------------------------------------
