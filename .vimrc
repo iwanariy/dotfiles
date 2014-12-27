@@ -163,10 +163,17 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 "" coffee script
 "autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
 "
-"" unite.vim
-"" 入力モードで開始する
-"let g:unite_enable_start_insert=0
-"
+" -----------------------------------------------------------------------------
+" unite.vim
+" -----------------------------------------------------------------------------
+" unite prefix key.
+nnoremap [unite] <Nop>
+nmap <Space>u [unite]
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+" ファイル一覧
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
+
 "" ctrlp
 "let g:ctrolp_use_migemo    = 1 " ミゲモ検索
 "let g:ctrlp_jump_to_buffer = 2 " タブで開かれた場合はそのタブに切り替える
@@ -181,7 +188,7 @@ NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 ""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
 "NeoBundle 'thinca/vim-quickrun'       " 各種ソースコードをすばやく実行
-"
+
 call neobundle#end()
 
 
