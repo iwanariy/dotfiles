@@ -105,7 +105,18 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Recommended to install
+" Installation check.
+NeoBundleCheck
+
+" ----------------------------------------------------------------------------------------
+" Plugin
+" ----------------------------------------------------------------------------------------
+
+NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
+NeoBundle 'Shougo/neocomplcache'      " 補完
+"NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
+"NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
+""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
@@ -122,15 +133,12 @@ NeoBundleLazy "nvie/vim-flake8", {
       \ }}
 autocmd BufWritePost *.py call Flake8()
 
-filetype plugin indent on     " Required!
+call neobundle#end()
 
 
-" Installation check.
-NeoBundleCheck
+" Required:
+filetype plugin indent on
 
-" ----------------------------------------------------------------------------------------
-" Plugin
-" ----------------------------------------------------------------------------------------
 "" molokai.vim
 "let g:molokai_original = 1
 "set t_Co=256
@@ -138,9 +146,6 @@ NeoBundleCheck
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
-
-"" coffee script
-"autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
 
 "------------------------------------------------------------
 " unite.vim
@@ -152,22 +157,12 @@ nmap <Space>u [unite]
 let g:unite_enable_start_insert=1
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
+call unite#custom_default_action('file', 'tabopen')
 
 "" ctrlp
 "let g:ctrolp_use_migemo    = 1 " ミゲモ検索
 "let g:ctrlp_jump_to_buffer = 2 " タブで開かれた場合はそのタブに切り替える
 "let g:ctrlp_open_new_file  = 1 " 新規作成時にタブで開く
-"
-"" originalrepos on github
-NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
-NeoBundle 'Shougo/neocomplcache'      " 補完
-"NeoBundle 'Shougo/neosnippet'         " スニペット
-"NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
-"NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
-""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
-
-call neobundle#end()
-
 
 " ----------------------------------------------------------------------------------------
 "  追加分
