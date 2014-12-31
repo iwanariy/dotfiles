@@ -139,11 +139,6 @@ call neobundle#end()
 " Required:
 filetype plugin indent on
 
-"" molokai.vim
-"let g:molokai_original = 1
-"set t_Co=256
-"colorscheme molokai
-
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
@@ -159,10 +154,6 @@ let g:unite_enable_start_insert=1
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
 call unite#custom_default_action('file', 'tabopen')
 
-"" ctrlp
-"let g:ctrolp_use_migemo    = 1 " ミゲモ検索
-"let g:ctrlp_jump_to_buffer = 2 " タブで開かれた場合はそのタブに切り替える
-"let g:ctrlp_open_new_file  = 1 " 新規作成時にタブで開く
 
 " ----------------------------------------------------------------------------------------
 "  追加分
