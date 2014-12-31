@@ -2,6 +2,7 @@
 " 基本設定
 "------------------------------------------------------------
 set noswapfile            " スワップファイルをつくらない
+set nobackup              " バックアップファイル（xxx.txt~）を作らない
 set nocompatible          " vi互換モードをオフ（vimの拡張機能を有効)
 set hidden                " 編集中でも、保存しないで他のファイルを開けるようにする
 set cmdheight=2           " 画面下部に表示されるコマンドラインの高さの設定
@@ -14,6 +15,7 @@ set mouse=a               " 全モードでマウスを有効化
 " キーコードはすぐにタイムアウト  マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
 
+
 "------------------------------------------------------------
 " ステータスライン
 "------------------------------------------------------------
@@ -22,6 +24,7 @@ set ruler        " ステータスライン上にルーラーを表示する（�
 
 " [ファイルフォーマット][エンコーディング][改行タイプ] 行数, 列数／総列数
 set statusline=%F%m%r%h%w\%=[FILETYPE=%Y][ENC=%{&fenc}][%{&ff}]%=%c,\%l/%L
+
 
 "------------------------------------------------------------
 " インデント
@@ -37,6 +40,7 @@ set backspace=indent,eol,start
 set tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNew,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
+
 
 "------------------------------------------------------------
 " 表示
@@ -116,7 +120,6 @@ NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザ�
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
-""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
@@ -153,11 +156,3 @@ let g:unite_enable_start_insert=1
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
 call unite#custom_default_action('file', 'tabopen')
-
-
-" ----------------------------------------------------------------------------------------
-"  追加分
-" ----------------------------------------------------------------------------------------
-
-" No backup
-set nobackup
