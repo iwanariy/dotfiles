@@ -53,15 +53,6 @@ set wildchar=<tab> " コマンド補完を開始するキー
 set history=1000   " コマンド・検索パターンの履歴数
 set wildmode=list:longest,full
 
-" wildmodeのオプション色々
-" [none]       最初のマッチのみを補完する。
-" full         次のマッチを完全に補完する。最後のマッチの次には元の文字列が使われ、その次は再び最初のマッチが補完される
-" longest      共通する最長の文字列までが補完される。それ以上長い文字列を補完できないときは、次の候補に移る
-" longest:full longestと似ているが、'wildmenu' " が有効ならばそれを開始する
-" list"        複数のマッチがあるときは、全てのマッチを羅列する。
-" list:full    複数のマッチがあるときは、全てのマッチを羅列し、最初のマッチを補完する
-" list:longest 複数のマッチがあるときは、全てのマッチを羅列し、共通する最長の文字列までが補完される
-
 " 補完の背景の色を設定
 hi Pmenu ctermbg=4
 hi PmenuSel ctermbg=1
@@ -150,7 +141,7 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
 "" coffee script
 "autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
-"
+
 "------------------------------------------------------------
 " unite.vim
 "------------------------------------------------------------
@@ -171,7 +162,6 @@ nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file
 NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Shougo/neosnippet'         " スニペット
-"NeoBundle 'othree/html5.vim'          " html5のタグのカラー
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 "NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 ""NeoBundle 'scrooloose/syntastic.git' " シンタックスのチェック（重たくなるようなのでとりあえず解除）
