@@ -119,7 +119,6 @@ NeoBundleCheck
 NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
-"NeoBundle 'kien/ctrlp.vim.git'        " コマンドラインでのファイル補完
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
