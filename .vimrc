@@ -10,7 +10,7 @@ set showcmd               " 入力したコマンドをステータスライン�
 set scrolloff=5           " カーソルの上または下に表示される最小限の行数  5に設定してあるので、下に5行は必ず表示される
 set visualbell            " ビープの代わりにビジュアルベル（画面フラッシュ）を使う
 set vb t_vb=              " ビープを鳴らさない
-set mouse=a               " 全モードでマウスを有効化
+" set mouse=a               " 全モードでマウスを有効化
 
 " キーコードはすぐにタイムアウト  マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
