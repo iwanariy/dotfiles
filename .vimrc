@@ -47,6 +47,7 @@ autocmd BufNew,BufRead *.rb setlocal tabstop=2 shiftwidth=2 softtabstop=0
 "------------------------------------------------------------
 set showmatch  " カッコの対応をハイライト
 set cursorline " カーソル行のハイライト
+colorscheme elflord
 
 
 "------------------------------------------------------------
