@@ -126,6 +126,7 @@ NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザ�
 NeoBundle 'Shougo/neocomplcache'      " 補完
 "NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'fatih/vim-go'              " golang
 NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
                 \ 'windows' : 'make -f make_mingw32.mak',
