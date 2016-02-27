@@ -79,6 +79,7 @@ set incsearch  " インクリメンタルサーチを有効化
 
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+nnoremap <C-e> :!python %
 
 
 "------------------------------------------------------------
