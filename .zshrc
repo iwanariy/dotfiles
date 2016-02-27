@@ -88,3 +88,4 @@ export ANT_HOME="/usr/local/bin/ant/"
 export PATH="$PATH:$ANT_HOME/bin"
 export GOPATH="$HOME/golang"
 export PATH="/usr/local/go/bin:$PATH"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
