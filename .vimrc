@@ -135,6 +135,7 @@ NeoBundle 'Shougo/vimproc', {
                 \ 'unix' : 'make -f make_unix.mak',
         \ },
 \ }
+NeoBundle 'davidhalter/jedi-vim'
 
 " markdown
 NeoBundle 'kannokanno/previm'
