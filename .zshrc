@@ -86,3 +86,5 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 ################################################################################
 export ANT_HOME="/usr/local/bin/ant/"
 export PATH="$PATH:$ANT_HOME/bin"
+export GOPATH="$HOME/golang"
+export PATH="/usr/local/go/bin:$PATH"
