@@ -171,3 +171,8 @@ let g:unite_enable_start_insert=1
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
 call unite#custom_default_action('file', 'tabopen')
+
+"------------------------------------------------------------
+" jedi-vim
+"------------------------------------------------------------
+autocmd FileType python setlocal completeopt-=preview
