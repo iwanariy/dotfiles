@@ -97,3 +97,14 @@ if [ -f $HOME/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
     source $HOME/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh
 fi
+# ghq + peco
+function peco-src () {
+    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
