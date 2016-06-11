@@ -89,11 +89,11 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 eval "$(pyenv init -)"
 
 ### Virtualenvwrapper
-if [ -f /Users/YukiIwanari/.pyenv/versions/3.5.0/bin/virtualenvwrapper.sh ]; then
+if [ -f $HOME/.pyenv/versions/3.5.0/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
-    source /Users/YukiIwanari/.pyenv/versions/3.5.0/bin/virtualenvwrapper.sh
+    source $HOME/.pyenv/versions/3.5.0/bin/virtualenvwrapper.sh
 fi
-if [ -f /Users/YukiIwanari/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh ]; then
+if [ -f $HOME/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
-    source /Users/YukiIwanari/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh
+    source $HOME/.pyenv/versions/2.7.10/bin/virtualenvwrapper.sh
 fi
