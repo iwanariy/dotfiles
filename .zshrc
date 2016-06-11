@@ -72,8 +72,6 @@ export PATH="/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/op
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
