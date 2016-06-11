@@ -83,7 +83,7 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 export ANT_HOME="/usr/local/bin/ant/"
 export PATH="$PATH:$ANT_HOME/bin"
 export GOPATH=$HOME
-export PATH="/usr/local/go/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 eval "$(pyenv init -)"
