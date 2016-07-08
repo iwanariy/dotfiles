@@ -136,6 +136,7 @@ NeoBundle 'Shougo/vimproc', {
         \ },
 \ }
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'glidenote/serverspec-snippets'
 
 " markdown
 NeoBundle 'kannokanno/previm'
@@ -173,7 +174,6 @@ au FileType go nmap <leader>t <Plug>(go-test)
 "------------------------------------------------------------
 " serverspec-snippets
 "------------------------------------------------------------
-NeoBundle 'glidenote/serverspec-snippets'
 " setting example
 let g:neosnippet#snippets_directory = [
     \'~/.vim/snippets',
