@@ -134,22 +134,17 @@ NeoBundle 'Shougo/vimproc', {
                 \ 'unix' : 'make -f make_unix.mak',
         \ },
 \ }
+
+" Python
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'glidenote/serverspec-snippets'
-
-" markdown
-NeoBundle 'kannokanno/previm'
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-let g:previm_open_cmd = 'open -a Safari'
-
 NeoBundleLazy "nvie/vim-flake8", {
       \ "autoload": {
       \   "filetypes": ["python", "python3", "djangohtml"]
       \ }}
 autocmd BufWritePost *.py call Flake8()
+
+" Serverspec
+NeoBundle 'glidenote/serverspec-snippets'
 
 call neobundle#end()
 
