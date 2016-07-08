@@ -152,7 +152,9 @@ call neobundle#end()
 " Required:
 filetype plugin indent on
 
+"------------------------------------------------------------
 " neocomplete
+"------------------------------------------------------------
 let g:neocomplete#enable_at_startup = 1
 if !exists('g:neocomplete#omni_patterns')
     let g:neocomplete#omni_patterns = {}
