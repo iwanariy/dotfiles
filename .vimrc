@@ -157,8 +157,18 @@ call neobundle#end()
 " Required:
 filetype plugin indent on
 
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#omni_patterns')
+    let g:neocomplete#omni_patterns = {}
+endif
+let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
+
+"------------------------------------------------------------
+" vim-go
+"------------------------------------------------------------
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>t <Plug>(go-test)
 
 "------------------------------------------------------------
 " unite.vim
