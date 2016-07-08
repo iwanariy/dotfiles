@@ -124,7 +124,6 @@ NeoBundleCheck
 
 NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplete'      " 補完
-"NeoBundle 'Townk/vim-autoclose'       " カッコやダブルコーテーションを自動で閉じる
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'fatih/vim-go'              " golang
 NeoBundle 'Shougo/vimproc', {
@@ -135,22 +134,17 @@ NeoBundle 'Shougo/vimproc', {
                 \ 'unix' : 'make -f make_unix.mak',
         \ },
 \ }
+
+" Python
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'glidenote/serverspec-snippets'
-
-" markdown
-NeoBundle 'kannokanno/previm'
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-let g:previm_open_cmd = 'open -a Safari'
-
 NeoBundleLazy "nvie/vim-flake8", {
       \ "autoload": {
       \   "filetypes": ["python", "python3", "djangohtml"]
       \ }}
 autocmd BufWritePost *.py call Flake8()
+
+" Serverspec
+NeoBundle 'glidenote/serverspec-snippets'
 
 call neobundle#end()
 
@@ -158,7 +152,9 @@ call neobundle#end()
 " Required:
 filetype plugin indent on
 
+"------------------------------------------------------------
 " neocomplete
+"------------------------------------------------------------
 let g:neocomplete#enable_at_startup = 1
 if !exists('g:neocomplete#omni_patterns')
     let g:neocomplete#omni_patterns = {}
