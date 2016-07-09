@@ -143,9 +143,6 @@ NeoBundleLazy "nvie/vim-flake8", {
       \ }}
 autocmd BufWritePost *.py call Flake8()
 
-" Serverspec
-NeoBundle 'glidenote/serverspec-snippets'
-
 call neobundle#end()
 
 
@@ -166,15 +163,6 @@ let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
 "------------------------------------------------------------
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
-
-"------------------------------------------------------------
-" serverspec-snippets
-"------------------------------------------------------------
-" setting example
-let g:neosnippet#snippets_directory = [
-    \'~/.vim/snippets',
-    \'~/.vim/bundle/serverspec-snippets',
-    \]
 
 "------------------------------------------------------------
 " unite.vim
