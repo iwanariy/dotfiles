@@ -1,13 +1,13 @@
 dotfiles
 ========
-narikin's dotfiles
+my dotfiles
 
 Usage
 --------
 
 ```
 cd ~
-git clone https://github.com/narikin/dotfiles.git
+git clone https://github.com/iwanariy/dotfiles.git
 ```
 
 ```bash
