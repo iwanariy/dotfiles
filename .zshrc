@@ -108,3 +108,9 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/local/lib/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/local/lib/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/local/lib/google-cloud-sdk/completion.zsh.inc'; fi
