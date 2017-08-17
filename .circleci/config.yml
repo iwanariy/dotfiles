@@ -5,4 +5,4 @@ jobs:
     docker:
       - image: centos:7
     steps:
-      - yum -y install zsh
+      - run: yum -y install zsh
