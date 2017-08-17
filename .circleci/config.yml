@@ -6,3 +6,4 @@ jobs:
       - image: centos:7
     steps:
       - run: yum -y install zsh
+      - run: zsh --version
