@@ -1,4 +1,4 @@
-dotfiles
+dotfiles [![CircleCI](https://circleci.com/gh/iwanariy/dotfiles.svg?style=svg)](https://circleci.com/gh/iwanariy/dotfiles)
 ========
 my dotfiles
 
