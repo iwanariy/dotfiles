@@ -122,7 +122,6 @@ NeoBundleCheck
 " Plugin
 " ----------------------------------------------------------------------------------------
 
-NeoBundle 'Shougo/unite.vim'          " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplete'      " 補完
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'fatih/vim-go'              " golang
@@ -163,18 +162,6 @@ let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
 "------------------------------------------------------------
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
-
-"------------------------------------------------------------
-" unite.vim
-"------------------------------------------------------------
-" unite prefix key.
-nnoremap [unite] <Nop>
-nmap <Space>u [unite]
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-" ファイル一覧
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
-call unite#custom_default_action('file', 'tabopen')
 
 "------------------------------------------------------------
 " jedi-vim
