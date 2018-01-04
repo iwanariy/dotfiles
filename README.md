@@ -12,4 +12,5 @@ dotfiles/install.sh
 
 Reference
 --------
-http://sandragon.hatenablog.com/entry/2013/05/20/123427
+- http://sandragon.hatenablog.com/entry/2013/05/20/123427
+- https://github.com/int128/dotfiles
