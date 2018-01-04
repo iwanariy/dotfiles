@@ -10,3 +10,7 @@ git config --global include.path "$dotfiles_base/.gitconfig"
 # Install dotfiles
 ln -snfv "$dotfiles_base/.zshrc" "$HOME/.zshrc"
 ln -snfv "$dotfiles_base/.vimrc" "$HOME/.vimrc"
+
+# vim
+git clone https://github.com/Shougo/neobundle.vim "$HOME/.vim/bundle/neobundle.vim"
+"$HOME/.vim/bundle/neobundle.vim/bin/neoinstall"
