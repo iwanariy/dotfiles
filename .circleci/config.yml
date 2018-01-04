@@ -7,5 +7,4 @@ jobs:
     steps:
       - checkout
       - run: yum -y install zsh
-      - run: zsh --version
-      - run: ls -al
+      - run: zsh -l -c env
