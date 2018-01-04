@@ -1,0 +1,20 @@
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	co = checkout
+  ci = commit
+  st = status
+  df = diff
+  br = branch
+	com = checkout master
+[ghq]
+	root = ~/src
+[merge]
+	ff = false
+[pull]
+	ff = only
