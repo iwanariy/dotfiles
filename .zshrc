@@ -80,6 +80,8 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 ################################################################################
 # Added manually
 ################################################################################
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 export ANT_HOME="/usr/local/bin/ant/"
 export PATH="$PATH:$ANT_HOME/bin"
 export GOPATH=$HOME
