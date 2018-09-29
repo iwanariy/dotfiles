@@ -120,3 +120,7 @@ if [ -f '/opt/local/lib/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/loca
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/local/lib/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.embulk/bin:$PATH"
+
+source <(kubectl completion zsh)
