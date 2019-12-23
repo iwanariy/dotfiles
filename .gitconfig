@@ -7,10 +7,10 @@
 	branch = auto
 [alias]
 	co = checkout
-  ci = commit
-  st = status
-  df = diff
-  br = branch
+	ci = commit
+	st = status
+	df = diff
+	br = branch
 	com = checkout master
 [ghq]
 	root = ~/src

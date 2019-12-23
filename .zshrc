@@ -13,7 +13,7 @@ fi
 #
 # Customize to your needs...
 #
-export PATH="/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export ANT_HOME="/usr/local/bin/ant/"
@@ -27,6 +27,9 @@ eval "$(pyenv init -)"
 
 # gi()
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# specify LANG for git
+export LANG=C
 
 # ghq + peco
 function peco-src () {
