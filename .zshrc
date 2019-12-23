@@ -13,16 +13,14 @@ fi
 #
 # Customize to your needs...
 #
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export ANT_HOME="/usr/local/bin/ant/"
-export PATH="$PATH:$ANT_HOME/bin"
 export GOPATH=$HOME
+export KUBE_EDITOR="/usr/local/bin/vim"
+export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH="/usr/local/sbin:$PATH"
-export KUBE_EDITOR="/usr/local/bin/vim"
 eval "$(pyenv init -)"
 
 # gi()
