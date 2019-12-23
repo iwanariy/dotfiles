@@ -54,10 +54,14 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+source <(kubectl completion zsh)
+
+# History
+export HISTSIZE=1000
+export SAVE=100000
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/local/lib/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/local/lib/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/opt/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/local/lib/google-cloud-sdk/completion.zsh.inc'; fi
-
-source <(kubectl completion zsh)
+if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
