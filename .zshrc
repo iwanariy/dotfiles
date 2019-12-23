@@ -14,11 +14,9 @@ fi
 # Customize to your needs...
 #
 export PYENV_ROOT="$HOME/.pyenv"
-export GOPATH=$HOME
 export KUBE_EDITOR="/usr/local/bin/vim"
 export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH="/usr/local/sbin:$PATH"
 eval "$(pyenv init -)"
