@@ -15,10 +15,10 @@ fi
 #
 export PYENV_ROOT="$HOME/.pyenv"
 export KUBE_EDITOR="/usr/local/bin/vim"
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-export PATH="/usr/local/sbin:$PATH"
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+export PATH=$PATH:$PYENV_ROOT/bin
 eval "$(pyenv init -)"
 
 # gi()
