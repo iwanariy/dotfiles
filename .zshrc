@@ -19,6 +19,7 @@ export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export PATH=$PATH:$PYENV_ROOT/bin
+export PATH=$PATH:$HOME/.nodebrew/current/bin
 eval "$(pyenv init -)"
 
 # gi()
