@@ -2,7 +2,7 @@
 
 dotfiles_base="$(cd $(dirname "$0") && pwd)"
 
-# Git
+# git
 git config --global user.name "$(cd "$dotfiles_base" && git log -1 --format=format:%an)"
 git config --global user.email "$(cd "$dotfiles_base" && git log -1 --format=format:%ae)"
 git config --global include.path "$dotfiles_base/.gitconfig"
