@@ -14,3 +14,6 @@ ln -snfv "$dotfiles_base/.vimrc" "$HOME/.vimrc"
 # vim
 git clone https://github.com/Shougo/neobundle.vim "$HOME/.vim/bundle/neobundle.vim"
 "$HOME/.vim/bundle/neobundle.vim/bin/neoinstall"
+
+# ghq
+git config --global ghq.root ~/go/src
