@@ -20,6 +20,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export PATH=$PATH:$PYENV_ROOT/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
+export PATH=$PATH:/opt/homebrew/bin
 
 # pyenv
 if [ -d "${PYENV_ROOT}" ]; then
