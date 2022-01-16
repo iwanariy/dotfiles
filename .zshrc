@@ -73,6 +73,13 @@ export SAVE=100000
 . $(pack completion -s zsh)
 eval "$(gh completion -s zsh)"
 
+# create repo in github.com, ghq, and open in VS Code
+function ghcr () {
+  gh repo create $argv --private
+  ghq get git@github.com:iwanariy/$argv[1].git
+  code /Users/yuki/go/src/github.com/iwanariy/$argv[1]
+}
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
 
