@@ -15,18 +15,19 @@ fi
 #
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="/usr/bin/vim"
+export PATH=$PATH:/opt/homebrew/bin
 export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$PYENV_ROOT/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
-export PATH=$PATH:/opt/homebrew/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # pyenv
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    # eval "$(pyenv virtualenv-init -)"
 fi
 
 # gi()
@@ -69,10 +70,11 @@ source <(kubectl completion zsh)
 export HISTSIZE=1000
 export SAVE=100000
 
+. $(pack completion -s zsh)
+eval "$(gh completion -s zsh)"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
-
-. $(pack completion -s zsh)
