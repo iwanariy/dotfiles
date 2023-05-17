@@ -119,7 +119,7 @@ NeoBundleCheck
 " Plugin
 " ----------------------------------------------------------------------------------------
 
-NeoBundle 'Shougo/neocomplete'      " 補完
+" NeoBundle 'Shougo/neocomplete'      " 補完
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'fatih/vim-go'              " golang
 NeoBundle 'Shougo/vimproc', {
@@ -148,11 +148,11 @@ filetype plugin indent on
 "------------------------------------------------------------
 " neocomplete
 "------------------------------------------------------------
-let g:neocomplete#enable_at_startup = 1
-if !exists('g:neocomplete#omni_patterns')
-    let g:neocomplete#omni_patterns = {}
-endif
-let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
+" let g:neocomplete#enable_at_startup = 1
+" if !exists('g:neocomplete#omni_patterns')
+"     let g:neocomplete#omni_patterns = {}
+" endif
+" let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
 
 "------------------------------------------------------------
 " jedi-vim
