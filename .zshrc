@@ -10,11 +10,18 @@
 #
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="/usr/bin/vim"
-export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export PATH=$PATH:$PYENV_ROOT/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
+export PATH=$PATH:/usr/local/bin/istio-1.9.2/bin
+export PATH=$PATH:/opt/homebrew/bin/
+export GOPATH=$(go env GOPATH)
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 # pyenv
 if [ -d "${PYENV_ROOT}" ]; then
@@ -57,7 +64,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-source <(kubectl completion zsh)
 
 # History
 export HISTSIZE=1000
@@ -70,3 +76,8 @@ if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin
 if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
 . $(pack completion -s zsh)
+
+setopt nonomatch
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source <(kubectl completion zsh)
