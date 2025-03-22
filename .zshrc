@@ -13,17 +13,11 @@ fi
 #
 # Customize to your needs...
 #
-export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="/usr/bin/vim"
 export GOPATH=$(go env GOPATH)
-export PATH=$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:"${KREW_ROOT:-$HOME/.krew}/bin":"${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
+export PATH=$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:"${KREW_ROOT:-$HOME/.krew}/bin"
 
-# pyenv
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-    # eval "$(pyenv virtualenv-init -)"
-fi
+alias python='python3'
 
 # gi()
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
