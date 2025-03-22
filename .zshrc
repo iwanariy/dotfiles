@@ -15,13 +15,8 @@ fi
 #
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="/usr/bin/vim"
-export PATH=$PATH:/opt/homebrew/bin
 export GOPATH=$(go env GOPATH)
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$PYENV_ROOT/bin
-export PATH=$PATH:$HOME/.nodebrew/current/bin
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:"${KREW_ROOT:-$HOME/.krew}/bin":"${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
 
 # pyenv
 if [ -d "${PYENV_ROOT}" ]; then
