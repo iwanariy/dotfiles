@@ -14,8 +14,8 @@ fi
 # Customize to your needs...
 #
 export EDITOR="/usr/bin/vim"
-export GOPATH=$(go env GOPATH)
 export PATH=$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:"${KREW_ROOT:-$HOME/.krew}/bin"
+export GOPATH=$(go env GOPATH)
 
 alias python='python3'
 
@@ -76,6 +76,12 @@ if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin
 if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
 # uv
-eval "$(uv generate-shell-completion zsh)"
+# Check if uv command exists before setting up completion
+if command -v uv &> /dev/null; then
+  eval "$(uv generate-shell-completion zsh)"
+else
+  # Optionally, print a warning if uv is not found
+  # echo "Warning: uv command not found. Skipping uv completion setup." >&2
+fi
 
 . "$HOME/.local/bin/env"
